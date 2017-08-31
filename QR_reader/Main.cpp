@@ -16,18 +16,15 @@ QREncodingMode ConvertEncodingMode(int qdata) {
 	}
 }
 
-bool decode(const Image& image, QRData& data) {
+bool decode(const Image& image, QRData& data, TextWriter datafile) {
 	struct quirc *m_quirc = quirc_new();
-	s3d::Size m_currentSize(640, 480);
 
 	if (!image || !m_quirc) {
 		return false;
 	}
 
-	if (image.size != m_currentSize) {
-		quirc_resize(m_quirc, image.width, image.height);
-
-		m_currentSize = image.size;
+	if (quirc_resize(m_quirc, image.width, image.height)) {
+		return false;
 	}
 
 	uint8* p = quirc_begin(m_quirc, nullptr, nullptr);
@@ -53,7 +50,7 @@ bool decode(const Image& image, QRData& data) {
 	qerr = quirc_decode(&qcode, &qdata);
 
 	if (qerr) {// ここでエラー
-		
+		//return false;
 	}
 
 	for (size_t i = 0; i < 4; ++i) {
@@ -82,7 +79,7 @@ bool decode(const Image& image, QRData& data) {
 }
 
 void Main() {
-	/*Webcam webcam;
+	Webcam webcam;
 
 	if (!webcam.open(0, Size(640, 480))) {
 		return;
@@ -90,42 +87,45 @@ void Main() {
 
 	if (!webcam.start()) {
 		return;
-	}*/
+	}
 
 	Image image;
 	DynamicTexture texture;
 
+	//image = Image(L"../qr_1.jpg");
+
+	TextWriter datafile(L"data.txt");
+
 	while (System::Update()) {
-		//if (webcam.hasNewFrame()) {
-			//webcam.getFrame(image);
-		image = Image(L"../qr_1.jpg");
+		if (webcam.hasNewFrame()) {
+			webcam.getFrame(image);
 
-		texture.fill(image);
+			texture.fill(image);
 
-		QRData data;
+			QRData data;
 
-		if (decode(image, data)) {
-			switch (data.mode) {
-			case QREncodingMode::Numeric:
-				Println(L"Numeric: ", data.text);
-				break;
-			case QREncodingMode::Alnum:
-				Println(L"Alnum: ", data.text);
-				break;
-			case QREncodingMode::Kanji:
-				Println(L"Kanji: ", data.text);
-				break;
-			case QREncodingMode::Binary:
-				std::string binary;
-				binary.resize(data.data.size());
-				data.data.read(&binary[0], data.data.size());
-				Println(L"Binary: ", data.data.asArray());
-				Println(L"(Widen): ", Widen(binary));
-				Println(L"(UTF8): ", FromUTF8(binary));
-				break;
+			if (decode(image, data, datafile)) {
+				switch (data.mode) {
+				case QREncodingMode::Numeric:
+					Println(L"Numeric: ", data.text);
+					break;
+				case QREncodingMode::Alnum:
+					Println(L"Alnum: ", data.text);
+					break;
+				case QREncodingMode::Kanji:
+					Println(L"Kanji: ", data.text);
+					break;
+				case QREncodingMode::Binary:
+					std::string binary;
+					binary.resize(data.data.size());
+					data.data.read(&binary[0], data.data.size());
+					datafile.writeln(L"Binary: ", data.data.asArray());
+					datafile.writeln(L"(Widen): ", Widen(binary));
+					datafile.writeln(L"(UTF8): ", FromUTF8(binary));
+					break;
+				}
 			}
 		}
-		//}
 
 		if (texture) {
 			texture.draw();
