@@ -71,22 +71,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SIV3D_20160812)\Inc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SIV3D_20160812)\Inc;C:\Users\勇太\Desktop\勇太\高専\部活\情技\procon\H29\2017technical\QR_reader\QR_reader\lib;$(IncludePath)</IncludePath>
     <LibraryPath>$(SIV3D_20160812)\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SIV3D_20160812)\Inc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SIV3D_20160812)\Inc;C:\Users\勇太\Desktop\勇太\高専\部活\情技\procon\H29\2017technical\QR_reader\QR_reader\lib;$(IncludePath)</IncludePath>
     <LibraryPath>$(SIV3D_20160812)\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SIV3D_20160812)\Inc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SIV3D_20160812)\Inc;C:\Users\勇太\Desktop\勇太\高専\部活\情技\procon\H29\2017technical\QR_reader\QR_reader\lib;$(IncludePath)</IncludePath>
     <LibraryPath>$(SIV3D_20160812)\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SIV3D_20160812)\Inc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SIV3D_20160812)\Inc;C:\Users\勇太\Desktop\勇太\高専\部活\情技\procon\H29\2017technical\QR_reader\QR_reader\lib;$(IncludePath)</IncludePath>
     <LibraryPath>$(SIV3D_20160812)\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -162,6 +162,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="lib\decode.c" />
+    <ClCompile Include="lib\identify.c" />
+    <ClCompile Include="lib\quirc.c" />
+    <ClCompile Include="lib\version_db.c" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
