@@ -8,7 +8,7 @@ void Main() {
 	gui.setTitle(L"読み取りを続けますか?");
 	gui.add(L"yes", GUIButton::Create(L"Yes"));
 	gui.add(L"no", GUIButton::Create(L"No"));
-	gui.setPos(700, 10);
+	gui.setPos(650, 10);
 	gui.show(false);
 
 	Webcam webcam;
@@ -27,7 +27,8 @@ void Main() {
 	std::string binary;
 	Array<String> decoded;
 
-	json piece;
+	json piece = json::array();
+	int piece_count = 0;
 
 	std::ofstream jsonfile("data.json");
 
@@ -47,19 +48,25 @@ void Main() {
 			}
 		}
 
-		if (!webcam.isActive()) {
+		if (!webcam.isActive() && webcam.isOpened()) {
 			gui.show(true);
 			if (gui.button(L"yes").pressed) {
 				gui.show(false);
 				webcam.resume();
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < 10; i++) {
 					webcam.getFrame(image);
 				}
 			}
 			if (gui.button(L"no").pressed) {
+				gui.show(false);
+				webcam.close();
 				for (int i = 0; i < decoded.size(); i++) {
-
+					piece_count += FromString<int>(decoded[i].substr(0, decoded[i].indexOf(L':')));
 				}
+				for (int i = 0; i < piece_count; i++) {
+					object_init(&piece, i);
+				}
+				jsonfile << std::setw(2) << piece << std::endl;
 			}
 		}
 

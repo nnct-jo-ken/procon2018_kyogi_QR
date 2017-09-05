@@ -1,7 +1,7 @@
 #include "json_set.h"
 
 void object_init(json *creating_target, unsigned int object_no) {
-	json create = json::array();
+	json create = *creating_target;
 
 	create[object_no]["sy_id"] = object_no;
 	create[object_no]["points"] = json::array();
