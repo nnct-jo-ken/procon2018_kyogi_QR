@@ -29,6 +29,7 @@ void Main() {
 
 	json piece = json::array();
 	int piece_count = 0;
+	int i = 0;
 
 	std::ofstream jsonfile("data.json");
 
@@ -53,7 +54,7 @@ void Main() {
 			if (gui.button(L"yes").pressed) {
 				gui.show(false);
 				webcam.resume();
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < 15; i++) {
 					webcam.getFrame(image);
 				}
 			}
@@ -63,8 +64,13 @@ void Main() {
 				for (int i = 0; i < decoded.size(); i++) {
 					piece_count += FromString<int>(decoded[i].substr(0, decoded[i].indexOf(L':')));
 				}
+				piece_count++;
 				for (int i = 0; i < piece_count; i++) {
 					object_init(&piece, i);
+				}
+				for (const auto data : get_pieceinfo(decoded)) {
+					node_set(&piece, i, get_node(data));
+					i++;
 				}
 				jsonfile << std::setw(2) << piece << std::endl;
 			}

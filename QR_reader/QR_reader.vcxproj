@@ -162,6 +162,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="analysis.cpp" />
     <ClCompile Include="json_set.cpp" />
     <ClCompile Include="lib\decode.c" />
     <ClCompile Include="lib\identify.c" />
@@ -283,6 +284,7 @@
     <Font Include="Example\YomogiFont.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="analysis.h" />
     <ClInclude Include="include.h" />
     <ClInclude Include="json_set.h" />
     <ClInclude Include="json.hpp" />
