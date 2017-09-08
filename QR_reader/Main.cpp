@@ -27,7 +27,7 @@ void Main() {
 	std::string binary;
 	Array<String> decoded;
 
-	json piece = json::array();
+	json piece;
 	int piece_count = 0;
 	int i = 0;
 
