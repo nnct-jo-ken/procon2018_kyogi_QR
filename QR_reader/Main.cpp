@@ -65,6 +65,7 @@ void Main() {
 					piece_count += FromString<int>(decoded[i].substr(0, decoded[i].indexOf(L':')));
 				}
 				piece_count++;
+				piece["piece_count"] = piece_count;
 				for (int i = 0; i < piece_count; i++) {
 					object_init(&piece, i);
 				}
