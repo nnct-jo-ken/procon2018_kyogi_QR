@@ -1,15 +1,22 @@
 ﻿# include <Siv3D.hpp>
 #include <fstream>
+#include<boost\asio.hpp>
 #include"include.h"
 
 void Main() {
 	Window::Resize(1280, 960);
-	GUI gui(GUIStyle::Default);
-	gui.setTitle(L"読み取りを続けますか?");
-	gui.add(L"yes", GUIButton::Create(L"Yes"));
-	gui.add(L"no", GUIButton::Create(L"No"));
-	gui.setPos(650, 10);
-	gui.show(false);
+	GUI confirmation(GUIStyle::Default);
+	confirmation.setTitle(L"読み取りを続けますか?");
+	confirmation.add(L"yes", GUIButton::Create(L"Yes"));
+	confirmation.add(L"no", GUIButton::Create(L"No"));
+	confirmation.setPos(650, 10);
+	confirmation.show(false);
+
+	GUI selection(GUIStyle::Default);
+	selection.setTitle(L"形式?");
+	selection.add(L"category", GUIRadioButton::Create({ L"形状情報",L"配置情報" }, 0u));
+	selection.setPos(650, 10);
+	selection.show(false);
 
 	Webcam webcam;
 
@@ -20,6 +27,8 @@ void Main() {
 	if (!webcam.start()) {
 		return;
 	}
+
+	selection.show();
 
 	Image image;
 	DynamicTexture texture;
@@ -33,13 +42,14 @@ void Main() {
 
 	std::ofstream jsonfile("data.json");
 
+	QRData data;
+
 	while (System::Update()) {
+		PutText(upload(piece)).from(200, 100);
 		if (webcam.hasNewFrame()) {
 			webcam.getFrame(image);
 
 			texture.fill(image);
-
-			QRData data;
 			
 			if (decode(image, data)) {
 				webcam.pause();
@@ -50,21 +60,25 @@ void Main() {
 		}
 
 		if (!webcam.isActive() && webcam.isOpened()) {
-			gui.show(true);
-			if (gui.button(L"yes").pressed) {
-				gui.show(false);
+			selection.show(false);
+			confirmation.show(true);
+			if (confirmation.button(L"yes").pressed) {
+				confirmation.show(false);
 				webcam.resume();
-				for (int i = 0; i < 15; i++) {
-					webcam.getFrame(image);
-				}
+				
+				do {
+					webcam.getFrame(image);					
+				} while (decode(image, data));
 			}
-			if (gui.button(L"no").pressed) {
-				gui.show(false);
+			if (confirmation.button(L"no").pressed) {
+				confirmation.show(false);
 				webcam.close();
 				for (int i = 0; i < decoded.size(); i++) {
 					piece_count += FromString<int>(decoded[i].substr(0, decoded[i].indexOf(L':')));
 				}
-				piece_count++;
+				if (selection.radioButton(L"category").checked(0)) {
+					piece_count++;
+				}
 				piece["piece_count"] = piece_count;
 				for (int i = 0; i < piece_count; i++) {
 					object_init(&piece, i);
