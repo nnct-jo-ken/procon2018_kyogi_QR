@@ -5,13 +5,7 @@ void object_init(json *creating_target, unsigned int object_no) {
 
 	create["sy"][object_no]["sy_id"] = object_no;
 	create["sy"][object_no]["points"] = json::array();
-	create["sy"][object_no]["synthesis"]["source"]["sy_id"] = nullptr;
-	create["sy"][object_no]["synthesis"]["source"]["num"] = nullptr;
-	create["sy"][object_no]["synthesis"]["source"]["dir"] = nullptr;
-	create["sy"][object_no]["synthesis"]["target"]["sy_id"] = nullptr;
-	create["sy"][object_no]["synthesis"]["target"]["num"] = nullptr;
-	create["sy"][object_no]["synthesis"]["target"]["dir"] = nullptr;
-
+	
 	*creating_target = create;
 }
 
