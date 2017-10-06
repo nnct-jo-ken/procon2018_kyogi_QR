@@ -171,13 +171,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="analysis.cpp" />
-    <ClCompile Include="json_set.cpp" />
     <ClCompile Include="lib\decode.c" />
     <ClCompile Include="lib\identify.c" />
     <ClCompile Include="lib\quirc.c" />
     <ClCompile Include="lib\version_db.c" />
+    <ClCompile Include="text_set.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="network.cpp" />
     <ClCompile Include="qrdecode.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -295,9 +294,7 @@
   <ItemGroup>
     <ClInclude Include="analysis.h" />
     <ClInclude Include="include.h" />
-    <ClInclude Include="json_set.h" />
-    <ClInclude Include="json.hpp" />
-    <ClInclude Include="network.h" />
+    <ClInclude Include="text_set.h" />
     <ClInclude Include="qrdecode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

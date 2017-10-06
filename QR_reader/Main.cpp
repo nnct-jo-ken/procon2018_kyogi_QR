@@ -1,6 +1,5 @@
 ﻿# include <Siv3D.hpp>
 #include <fstream>
-#include<boost\asio.hpp>
 #include"include.h"
 
 void Main() {
@@ -14,7 +13,7 @@ void Main() {
 
 	GUI selection(GUIStyle::Default);
 	selection.setTitle(L"形式?");
-	selection.add(L"category", GUIRadioButton::Create({ L"形状情報",L"配置情報" }, 0u));
+	selection.add(L"category", GUIRadioButton::Create({ L"形状情報",L"配置情報" }));
 	selection.setPos(650, 10);
 	selection.show(false);
 
@@ -36,16 +35,11 @@ void Main() {
 	std::string binary;
 	Array<String> decoded;
 
-	json piece;
-	int piece_count = 0;
-	int i = 0;
-
-	std::ofstream jsonfile("data.json");
+	TextWriter info;
 
 	QRData data;
 
 	while (System::Update()) {
-		PutText(upload(piece)).from(200, 100);
 		if (webcam.hasNewFrame()) {
 			webcam.getFrame(image);
 
@@ -71,23 +65,19 @@ void Main() {
 				} while (decode(image, data));
 			}
 			if (confirmation.button(L"no").pressed) {
+				if (selection.radioButton(L"category").checkedItem == 0u) {
+					info = TextWriter(L"//169.254.79.134/Share/shape_info.txt");
+				}
+				else if (selection.radioButton(L"category").checkedItem == 1u) {
+					info = TextWriter(L"//169.254.79.134/Share/allocation_info.txt");
+				}
+
 				confirmation.show(false);
 				webcam.close();
-				for (int i = 0; i < decoded.size(); i++) {
-					piece_count += FromString<int>(decoded[i].substr(0, decoded[i].indexOf(L':')));
-				}
-				if (selection.radioButton(L"category").checked(0)) {
-					piece_count++;
-				}
-				piece["piece_count"] = piece_count;
-				for (int i = 0; i < piece_count; i++) {
-					object_init(&piece, i);
-				}
-				for (const auto data : get_pieceinfo(decoded)) {
-					node_set(&piece, i, get_node(data));
-					i++;
-				}
-				jsonfile << std::setw(2) << piece << std::endl;
+
+				node_set(info, get_pieceinfo(decoded));
+
+				info.close();
 			}
 		}
 

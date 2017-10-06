@@ -1,0 +1,1272 @@
+{
+  "piece_count": 31,
+  "sy": [
+    {
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 26,
+          "y": 0
+        },
+        {
+          "x": 26,
+          "y": 5
+        },
+        {
+          "x": 18,
+          "y": 5
+        },
+        {
+          "x": 18,
+          "y": 17
+        },
+        {
+          "x": 15,
+          "y": 24
+        },
+        {
+          "x": 10,
+          "y": 24
+        },
+        {
+          "x": 4,
+          "y": 20
+        },
+        {
+          "x": 0,
+          "y": 20
+        }
+      ],
+      "sy_id": 0,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 6,
+          "y": 42
+        },
+        {
+          "x": 7,
+          "y": 37
+        },
+        {
+          "x": 12,
+          "y": 39
+        },
+        {
+          "x": 12,
+          "y": 48
+        },
+        {
+          "x": 5,
+          "y": 46
+        }
+      ],
+      "sy_id": 1,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 26,
+          "y": 18
+        },
+        {
+          "x": 35,
+          "y": 18
+        },
+        {
+          "x": 28,
+          "y": 24
+        },
+        {
+          "x": 26,
+          "y": 28
+        },
+        {
+          "x": 17,
+          "y": 32
+        },
+        {
+          "x": 16,
+          "y": 28
+        }
+      ],
+      "sy_id": 2,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 26,
+          "y": 28
+        },
+        {
+          "x": 28,
+          "y": 24
+        },
+        {
+          "x": 35,
+          "y": 18
+        },
+        {
+          "x": 42,
+          "y": 18
+        },
+        {
+          "x": 52,
+          "y": 24
+        },
+        {
+          "x": 51,
+          "y": 28
+        },
+        {
+          "x": 50,
+          "y": 33
+        },
+        {
+          "x": 48,
+          "y": 42
+        },
+        {
+          "x": 33,
+          "y": 42
+        },
+        {
+          "x": 29,
+          "y": 35
+        }
+      ],
+      "sy_id": 3,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 50,
+          "y": 33
+        },
+        {
+          "x": 57,
+          "y": 36
+        },
+        {
+          "x": 57,
+          "y": 45
+        },
+        {
+          "x": 53,
+          "y": 44
+        },
+        {
+          "x": 48,
+          "y": 42
+        }
+      ],
+      "sy_id": 4,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 58,
+          "y": 19
+        },
+        {
+          "x": 73,
+          "y": 5
+        },
+        {
+          "x": 92,
+          "y": 4
+        },
+        {
+          "x": 100,
+          "y": 4
+        },
+        {
+          "x": 100,
+          "y": 9
+        },
+        {
+          "x": 81,
+          "y": 9
+        },
+        {
+          "x": 59,
+          "y": 24
+        }
+      ],
+      "sy_id": 5,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 69,
+          "y": 24
+        },
+        {
+          "x": 75,
+          "y": 24
+        },
+        {
+          "x": 75,
+          "y": 30
+        },
+        {
+          "x": 69,
+          "y": 30
+        }
+      ],
+      "sy_id": 6,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 73,
+          "y": 59
+        },
+        {
+          "x": 85,
+          "y": 59
+        },
+        {
+          "x": 85,
+          "y": 51
+        },
+        {
+          "x": 81,
+          "y": 42
+        },
+        {
+          "x": 100,
+          "y": 42
+        },
+        {
+          "x": 100,
+          "y": 64
+        },
+        {
+          "x": 73,
+          "y": 64
+        }
+      ],
+      "sy_id": 7,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 0,
+          "y": 20
+        },
+        {
+          "x": 4,
+          "y": 20
+        },
+        {
+          "x": 10,
+          "y": 24
+        },
+        {
+          "x": 9,
+          "y": 28
+        },
+        {
+          "x": 4,
+          "y": 26
+        },
+        {
+          "x": 0,
+          "y": 26
+        }
+      ],
+      "sy_id": 8,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 8,
+          "y": 32
+        },
+        {
+          "x": 17,
+          "y": 32
+        },
+        {
+          "x": 19,
+          "y": 40
+        },
+        {
+          "x": 12,
+          "y": 39
+        },
+        {
+          "x": 7,
+          "y": 37
+        }
+      ],
+      "sy_id": 9,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 17,
+          "y": 32
+        },
+        {
+          "x": 26,
+          "y": 28
+        },
+        {
+          "x": 29,
+          "y": 35
+        },
+        {
+          "x": 23,
+          "y": 39
+        },
+        {
+          "x": 19,
+          "y": 40
+        }
+      ],
+      "sy_id": 10,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 29,
+          "y": 44
+        },
+        {
+          "x": 33,
+          "y": 42
+        },
+        {
+          "x": 38,
+          "y": 51
+        },
+        {
+          "x": 34,
+          "y": 54
+        }
+      ],
+      "sy_id": 11,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 51,
+          "y": 28
+        },
+        {
+          "x": 60,
+          "y": 29
+        },
+        {
+          "x": 62,
+          "y": 37
+        },
+        {
+          "x": 57,
+          "y": 36
+        },
+        {
+          "x": 50,
+          "y": 33
+        }
+      ],
+      "sy_id": 12,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 59,
+          "y": 24
+        },
+        {
+          "x": 69,
+          "y": 24
+        },
+        {
+          "x": 69,
+          "y": 30
+        },
+        {
+          "x": 71,
+          "y": 36
+        },
+        {
+          "x": 62,
+          "y": 37
+        },
+        {
+          "x": 60,
+          "y": 29
+        }
+      ],
+      "sy_id": 13,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 69,
+          "y": 30
+        },
+        {
+          "x": 75,
+          "y": 30
+        },
+        {
+          "x": 78,
+          "y": 35
+        },
+        {
+          "x": 71,
+          "y": 36
+        }
+      ],
+      "sy_id": 14,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 75,
+          "y": 24
+        },
+        {
+          "x": 100,
+          "y": 24
+        },
+        {
+          "x": 100,
+          "y": 42
+        },
+        {
+          "x": 81,
+          "y": 42
+        },
+        {
+          "x": 78,
+          "y": 35
+        },
+        {
+          "x": 75,
+          "y": 30
+        }
+      ],
+      "sy_id": 15,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 0,
+          "y": 26
+        },
+        {
+          "x": 4,
+          "y": 26
+        },
+        {
+          "x": 9,
+          "y": 28
+        },
+        {
+          "x": 8,
+          "y": 32
+        },
+        {
+          "x": 6,
+          "y": 42
+        },
+        {
+          "x": 0,
+          "y": 42
+        }
+      ],
+      "sy_id": 16,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 10,
+          "y": 24
+        },
+        {
+          "x": 15,
+          "y": 24
+        },
+        {
+          "x": 17,
+          "y": 32
+        },
+        {
+          "x": 8,
+          "y": 32
+        }
+      ],
+      "sy_id": 17,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 18,
+          "y": 5
+        },
+        {
+          "x": 26,
+          "y": 5
+        },
+        {
+          "x": 26,
+          "y": 0
+        },
+        {
+          "x": 50,
+          "y": 0
+        },
+        {
+          "x": 50,
+          "y": 7
+        },
+        {
+          "x": 42,
+          "y": 7
+        },
+        {
+          "x": 42,
+          "y": 12
+        },
+        {
+          "x": 26,
+          "y": 12
+        },
+        {
+          "x": 18,
+          "y": 17
+        }
+      ],
+      "sy_id": 18,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 33,
+          "y": 42
+        },
+        {
+          "x": 48,
+          "y": 42
+        },
+        {
+          "x": 46,
+          "y": 51
+        },
+        {
+          "x": 53,
+          "y": 53
+        },
+        {
+          "x": 68,
+          "y": 55
+        },
+        {
+          "x": 75,
+          "y": 54
+        },
+        {
+          "x": 85,
+          "y": 51
+        },
+        {
+          "x": 85,
+          "y": 59
+        },
+        {
+          "x": 38,
+          "y": 59
+        },
+        {
+          "x": 38,
+          "y": 51
+        }
+      ],
+      "sy_id": 19,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 52,
+          "y": 24
+        },
+        {
+          "x": 53,
+          "y": 19
+        },
+        {
+          "x": 58,
+          "y": 19
+        },
+        {
+          "x": 60,
+          "y": 29
+        },
+        {
+          "x": 51,
+          "y": 28
+        }
+      ],
+      "sy_id": 20,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 59,
+          "y": 24
+        },
+        {
+          "x": 81,
+          "y": 9
+        },
+        {
+          "x": 95,
+          "y": 9
+        },
+        {
+          "x": 83,
+          "y": 15
+        },
+        {
+          "x": 75,
+          "y": 24
+        }
+      ],
+      "sy_id": 21,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 71,
+          "y": 36
+        },
+        {
+          "x": 78,
+          "y": 35
+        },
+        {
+          "x": 81,
+          "y": 42
+        },
+        {
+          "x": 76,
+          "y": 44
+        }
+      ],
+      "sy_id": 22,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 83,
+          "y": 15
+        },
+        {
+          "x": 95,
+          "y": 9
+        },
+        {
+          "x": 100,
+          "y": 9
+        },
+        {
+          "x": 100,
+          "y": 24
+        },
+        {
+          "x": 75,
+          "y": 24
+        }
+      ],
+      "sy_id": 23,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 0,
+          "y": 42
+        },
+        {
+          "x": 6,
+          "y": 42
+        },
+        {
+          "x": 5,
+          "y": 46
+        },
+        {
+          "x": 4,
+          "y": 54
+        },
+        {
+          "x": 24,
+          "y": 60
+        },
+        {
+          "x": 34,
+          "y": 54
+        },
+        {
+          "x": 38,
+          "y": 51
+        },
+        {
+          "x": 38,
+          "y": 59
+        },
+        {
+          "x": 46,
+          "y": 59
+        },
+        {
+          "x": 46,
+          "y": 64
+        },
+        {
+          "x": 0,
+          "y": 64
+        }
+      ],
+      "sy_id": 24,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 12,
+          "y": 39
+        },
+        {
+          "x": 19,
+          "y": 40
+        },
+        {
+          "x": 21,
+          "y": 49
+        },
+        {
+          "x": 12,
+          "y": 48
+        }
+      ],
+      "sy_id": 25,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 19,
+          "y": 40
+        },
+        {
+          "x": 23,
+          "y": 39
+        },
+        {
+          "x": 29,
+          "y": 35
+        },
+        {
+          "x": 33,
+          "y": 42
+        },
+        {
+          "x": 25,
+          "y": 46
+        },
+        {
+          "x": 21,
+          "y": 49
+        }
+      ],
+      "sy_id": 26,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 42,
+          "y": 7
+        },
+        {
+          "x": 50,
+          "y": 7
+        },
+        {
+          "x": 50,
+          "y": 0
+        },
+        {
+          "x": 73,
+          "y": 0
+        },
+        {
+          "x": 73,
+          "y": 5
+        },
+        {
+          "x": 58,
+          "y": 19
+        },
+        {
+          "x": 53,
+          "y": 19
+        },
+        {
+          "x": 42,
+          "y": 12
+        }
+      ],
+      "sy_id": 27,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 53,
+          "y": 44
+        },
+        {
+          "x": 65,
+          "y": 47
+        },
+        {
+          "x": 68,
+          "y": 55
+        },
+        {
+          "x": 53,
+          "y": 53
+        }
+      ],
+      "sy_id": 28,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 62,
+          "y": 37
+        },
+        {
+          "x": 71,
+          "y": 36
+        },
+        {
+          "x": 76,
+          "y": 44
+        },
+        {
+          "x": 72,
+          "y": 45
+        },
+        {
+          "x": 65,
+          "y": 47
+        }
+      ],
+      "sy_id": 29,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    },
+    {
+      "points": [
+        {
+          "x": 72,
+          "y": 45
+        },
+        {
+          "x": 76,
+          "y": 44
+        },
+        {
+          "x": 81,
+          "y": 42
+        },
+        {
+          "x": 85,
+          "y": 51
+        },
+        {
+          "x": 75,
+          "y": 54
+        }
+      ],
+      "sy_id": 30,
+      "synthesis": {
+        "source": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        },
+        "target": {
+          "dir": null,
+          "num": null,
+          "sy_id": null
+        }
+      }
+    }
+  ]
+}
