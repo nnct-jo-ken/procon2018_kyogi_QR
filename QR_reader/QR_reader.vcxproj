@@ -76,7 +76,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SIV3D_20160812)\Inc;C:\Users\勇太\Desktop\勇太\高専\部活\情技\procon\H29\2017technical\QR_reader\QR_reader\lib;$(IncludePath)</IncludePath>
+    <IncludePath>$(SIV3D_20160812)\Inc;C:\Users\勇太\Desktop\勇太\高専\部活\情技\procon\H29\2017technical\QR_reader\QR_reader\lib;$(ProjectDir)\lib;$(IncludePath)</IncludePath>
     <LibraryPath>$(SIV3D_20160812)\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -294,6 +294,7 @@
   <ItemGroup>
     <ClInclude Include="analysis.h" />
     <ClInclude Include="include.h" />
+    <ClInclude Include="lib\quirc.h" />
     <ClInclude Include="text_set.h" />
     <ClInclude Include="qrdecode.h" />
   </ItemGroup>
