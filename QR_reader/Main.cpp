@@ -65,10 +65,10 @@ void Main() {
 				} while (decode(image, data));
 			}
 			if (confirmation.button(L"no").pressed) {
-				if (selection.radioButton(L"category").checkedItem == 0u) {
+				if (selection.radioButton(L"category").checked(0u)) {
 					info = TextWriter(L"//169.254.79.134/Share/shape_info.txt");
 				}
-				else if (selection.radioButton(L"category").checkedItem == 1u) {
+				else if (selection.radioButton(L"category").checked(1u)) {
 					info = TextWriter(L"//169.254.79.134/Share/allocation_info.txt");
 				}
 
