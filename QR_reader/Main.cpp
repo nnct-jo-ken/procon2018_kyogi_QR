@@ -3,15 +3,15 @@
 #include"include.h"
 
 void Main() {
-	Window::Resize(1280, 960);
-	GUI confirmation(GUIStyle::Default);
+	Window::Resize(900, 600);
+	GUI confirmation(GUIStyle::Default);	//読み取りを続けるのか確認ウィンドウ
 	confirmation.setTitle(L"読み取りを続けますか?");
 	confirmation.add(L"yes", GUIButton::Create(L"Yes"));
 	confirmation.add(L"no", GUIButton::Create(L"No"));
 	confirmation.setPos(650, 10);
 	confirmation.show(false);
 
-	GUI selection(GUIStyle::Default);
+	GUI selection(GUIStyle::Default);	//どれを読み込むのか確認ウィンドウ
 	selection.setTitle(L"形式?");
 	selection.add(L"category", GUIRadioButton::Create({ L"形状情報",L"配置情報" }));
 	selection.setPos(650, 10);
@@ -66,10 +66,10 @@ void Main() {
 			}
 			if (confirmation.button(L"no").pressed) {
 				if (selection.radioButton(L"category").checked(0u)) {
-					info = TextWriter(L"//169.254.79.134/Share/shape_info.txt");
+					info = TextWriter(L"shape_info.txt");
 				}
 				else if (selection.radioButton(L"category").checked(1u)) {
-					info = TextWriter(L"//169.254.79.134/Share/allocation_info.txt");
+					info = TextWriter(L"allocation_info.txt");
 				}
 
 				confirmation.show(false);
