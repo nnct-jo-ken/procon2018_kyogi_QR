@@ -40,6 +40,8 @@ void Main() {
 	QRData data;
 
 	while (System::Update()) {
+		Optional<Quad> quad;
+
 		if (webcam.hasNewFrame()) {
 			webcam.getFrame(image);
 
@@ -54,6 +56,8 @@ void Main() {
 		}
 
 		if (!webcam.isActive() && webcam.isOpened()) {
+			quad = data.quad;
+
 			selection.show(false);
 			confirmation.show(true);
 			if (confirmation.button(L"yes").pressed) {
@@ -83,6 +87,11 @@ void Main() {
 
 		if (texture) {
 			texture.draw();
+		}
+
+		if (quad)
+		{
+			quad->drawFrame(4, Palette::Red);
 		}
 	}
 }
