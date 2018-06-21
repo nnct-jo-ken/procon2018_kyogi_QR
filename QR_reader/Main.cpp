@@ -4,18 +4,18 @@
 
 void Main() {
 	Window::Resize(900, 600);
-	GUI confirmation(GUIStyle::Default);	//読み取りを続けるのか確認ウィンドウ
-	confirmation.setTitle(L"読み取りを続けますか?");
+
+	GUI message(GUIStyle::Default);	//情報ウィンドウ
+	message.setTitle(L"メッセージ");
+	message.setPos(650, 10);
+	message.add(L"tf1", GUITextField::Create(none));
+
+	GUI confirmation(GUIStyle::Default);	//確認ウィンドウ
+	confirmation.setTitle(L"これで良いですか?");
 	confirmation.add(L"yes", GUIButton::Create(L"Yes"));
 	confirmation.add(L"no", GUIButton::Create(L"No"));
-	confirmation.setPos(650, 10);
+	confirmation.setPos(650, 100);
 	confirmation.show(false);
-
-	GUI selection(GUIStyle::Default);	//どれを読み込むのか確認ウィンドウ
-	selection.setTitle(L"形式?");
-	selection.add(L"category", GUIRadioButton::Create({ L"形状情報",L"配置情報" }));
-	selection.setPos(650, 10);
-	selection.show(false);
 
 	Webcam webcam;
 
@@ -26,8 +26,6 @@ void Main() {
 	if (!webcam.start()) {
 		return;
 	}
-
-	selection.show();
 
 	Image image;
 	DynamicTexture texture;
@@ -43,6 +41,7 @@ void Main() {
 		Optional<Quad> quad;
 
 		if (webcam.hasNewFrame()) {
+			message.textField(L"tf1").setText(L"読み取り中");
 			webcam.getFrame(image);
 
 			texture.fill(image);
@@ -56,25 +55,12 @@ void Main() {
 		}
 
 		if (!webcam.isActive() && webcam.isOpened()) {
+			message.textField(L"tf1").setText(L"認識しました");
 			quad = data.quad;
 
-			selection.show(false);
 			confirmation.show(true);
 			if (confirmation.button(L"yes").pressed) {
-				confirmation.show(false);
-				webcam.resume();
-				
-				do {
-					webcam.getFrame(image);					
-				} while (decode(image, data));
-			}
-			if (confirmation.button(L"no").pressed) {
-				if (selection.radioButton(L"category").checked(0u)) {
-					info = TextWriter(L"shape_info.txt");
-				}
-				else if (selection.radioButton(L"category").checked(1u)) {
-					info = TextWriter(L"allocation_info.txt");
-				}
+				info = TextWriter(L"shape_info.txt");
 
 				confirmation.show(false);
 				webcam.close();
@@ -82,6 +68,15 @@ void Main() {
 				node_set(info, get_pieceinfo(decoded));
 
 				info.close();
+				message.textField(L"tf1").setText(L"出力しました");
+			}
+			if (confirmation.button(L"no").pressed) {
+				confirmation.show(false);
+				webcam.resume();
+				
+				do {
+					webcam.getFrame(image);					
+				} while (decode(image, data));
 			}
 		}
 
